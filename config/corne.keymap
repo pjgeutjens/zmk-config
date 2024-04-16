@@ -5,13 +5,11 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&led_strip {
-    chain-length = <27>;
-};
+&led_strip { chain-length = <27>; };
 
 / {
     keymap {
@@ -23,24 +21,27 @@
             // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ENTER   |
             // |LSHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RSHIFT  |
             //                    |LCTRL| LWR | GUI |   |SPACE| RSE  | ALT |
+
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB     &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp LSHFT   &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                          &kp LCTRL &mo 1  &kp LGUI     &kp SPACE  &mo 2  &kp RALT
+&kp ESCAPE  &kp Q  &kp W  &kp E      &kp R  &kp T       &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D      &kp F  &kp G       &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
+&kp LSHFT   &kp Z  &kp X  &kp C      &kp V  &kp B       &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                          &kp LCTRL  &mo 1  &kp LGUI    &kp SPACE  &mo 2  &kp RALT
             >;
         };
+
         lower_layer {
             // -----------------------------------------------------------------------------------------
             // | RGBTOG |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL|
             // | BTCLR  | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |  '   |
             // | SHFT   |     |     |     |     |     |   |     |     |     |     |     |RGBTOG|
             //                    |LCTRL|     | RET |   |SPACE|     | ALT |
+
             bindings = <
-&rgb_ug RGB_TOG      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0   &kp DEL
-&bt BT_CLR           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans   &kp SINGLE_QUOTE
-&trans               &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans   &rgb_ug RGB_TOG
-                                   &trans        &trans        &kp RET       &trans          &trans    &kp RALT
+&rgb_ug RGB_TOG  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0         &kp BACKSPACE
+&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_UP      &kp SINGLE_QUOTE
+&kp RCTRL        &trans        &trans        &trans        &trans        &trans          &kp INS   &kp HOME  &kp END   &kp DEL    &kp PAGE_DOWN  &rgb_ug RGB_TOG
+                                             &trans        &trans        &kp RET         &trans    &trans    &kp RALT
             >;
         };
 
@@ -50,11 +51,12 @@
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    |LCTRL|     | ENT |   | SPC |     | ALT |
+
             bindings = <
 &trans     &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &trans     &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &trans  &trans    &kp RET      &kp SPACE  &trans     &kp RALT
+                             &trans    &trans    &kp RET      &kp SPACE  &trans     &kp RALT
             >;
         };
     };
