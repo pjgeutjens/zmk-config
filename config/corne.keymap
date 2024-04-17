@@ -18,9 +18,9 @@
         default_layer {
             // -----------------------------------------------------------------------------------------
             // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ENTER   |
+            // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | LGUI |
             // |LSHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RSHIFT  |
-            //                    |LCTRL| LWR | GUI |   |SPACE| RSE  | ALT |
+            //                    |LCTRL| LWR |ENTER|   |SPACE| RSE  | ALT |
 
             bindings = <
 &kp ESCAPE  &kp Q  &kp W  &kp E      &kp R  &kp T       &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
