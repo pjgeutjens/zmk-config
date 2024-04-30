@@ -19,7 +19,8 @@
 
         combo_win_L {
             bindings = <&kt LG(L)>;
-            key-positions = <23 21 37>;
+            layers = <1>;
+            key-positions = <23 21>;
         };
     };
 
