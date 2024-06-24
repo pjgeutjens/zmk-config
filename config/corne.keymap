@@ -57,10 +57,10 @@
             //                    |LCTRL|     | RET |   |SPACE|     | ALT |
 
             bindings = <
-&rgb_ug RGB_TOG  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0         &kp DEL
-&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_UP      &kp LGUI
-&kp LSHFT        &trans        &trans        &trans        &trans        &trans          &kp INS   &kp HOME  &kp END   &kp DEL    &kp PAGE_DOWN  &kp RSHIFT
-                                             &trans        &trans        &kp RET         &trans    &trans    &kp RALT
+&rgb_ug RGB_TOG  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5           &kp N6           &kp N7    &kp N8    &kp N9     &kp N0         &kp DEL
+&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp LEFT         &kp DOWN  &kp UP    &kp RIGHT  &kp PG_UP      &kp LGUI
+&kp LSHFT        &kp INS       &kp HOME      &kp END       &kp PG_UP     &kp PAGE_DOWN    &rgb_ug RGB_EFF  &trans    &trans    &trans     &kp PAGE_DOWN  &kp RSHIFT
+                                             &trans        &trans        &kp RET          &trans           &trans    &kp RALT
             >;
         };
 
@@ -72,10 +72,10 @@
             //                    |LCTRL|     | ENT |   | SPC |     | ALT |
 
             bindings = <
-&ext_power EP_TOG  &kp EXCL         &kp AT                            &kp HASH                         &kp DLLR         &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL          &trans           &trans                            &trans                           &trans           &trans             &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans             &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(126,34,51)  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                                                      &trans                           &trans           &kp RET            &kp SPACE  &trans     &kp RALT
+&ext_power EP_TOG  &kp EXCL  &kp AT   &kp HASH  &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&trans             &kp F1    &kp F2   &kp F3    &kp F4           &kp F5       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&trans             &kp F10   &kp F11  &kp F12   &kp PRINTSCREEN  &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                      &trans    &trans           &kp RET      &kp SPACE  &trans     &kp RALT
             >;
         };
     };
